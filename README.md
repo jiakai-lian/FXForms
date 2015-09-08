@@ -13,7 +13,7 @@ Unlike other solutions, FXForms works directly with strongly-typed data models t
 Supported iOS & SDK Versions
 -----------------------------
 
-* Supported build target - iOS 8.1 (Xcode 6.1, Apple LLVM compiler 6.0)
+* Supported build target - iOS 8.3 (Xcode 6.3.1, Apple LLVM compiler 6.1)
 * Earliest supported deployment target - iOS 5.0
 * Earliest compatible deployment target - iOS 5.0
 
@@ -549,6 +549,30 @@ func fieldThatDoesntWorkField() -> NSDictionary {
 Release notes
 --------------
 
+Version 1.2.13
+
+- Exposed `nextCell` property on FXFormBaseCell
+- Fixed long UITextView's to scroll to the the cursor position instead of the bottom of the UITextView.
+- Made sure that when the keyboard is dismissed the former tableView contentInsets are restored.
+- Make custom cell config cascade down to options views
+- Fix to resolve crash bug when used with BaseModel
+- Fixed warnings on Xcode 7 beta (well, suppressed mostly)
+
+Version 1.2.12
+
+- Custom titles for template fields are no longer displayed inside each field item, they are only used for the "Add Item" button title.
+- Fixed another crash relating to using scalar default values for collection type fields
+- Reverse value transforms should now work correctly
+
+Version 1.2.11
+
+- Field descriptions for collections now respect FXFieldValueTransformer
+- Using Scalar values as default value for collection type fields now works transparently
+
+Version 1.2.10
+ 
+- Fixed crash when displaying photo picker on iPad
+ 
 Version 1.2.9
 
 - Cells defined using nibs now infer their height form the nib unless overridden
